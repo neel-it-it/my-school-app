@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2196F3"
+    tools:context=".ui.gallery.GalleryFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1">
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@id/profile_image"
+          android:layout_alignEnd="@id/profile_image"
+          android:elevation="1dp"
+          android:backgroundTint="#BDBDBD"
+          android:src="@drawable/ic_photo"
+          android:scaleType="centerInside">
+
+      </com.google.android.material.floatingactionbutton.FloatingActionButton>
+      <de.hdodenhof.circleimageview.CircleImageView
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/profile_image"
+          android:layout_width="126dp"
+          android:layout_height="126dp"
+          android:src="@drawable/markb"
+          android:layout_centerInParent="true"
+          app:civ_border_width="2dp"
+          app:civ_border_color="#FF000000"/>
+
+  </RelativeLayout>
+
+    <RelativeLayout
+        android:elevation="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/card_background">
+      <ScrollView
+          android:id="@+id/sc"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/card_background"
+          android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+      <TextView
+          android:id="@+id/tv1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Username"
+          android:layout_marginLeft="20dp"
+          android:layout_margin="10dp"
+          android:textSize="15sp"/>
+          <TextView
+              android:id="@+id/tv2"
+              android:layout_below="@id/tv1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Mark Zuckerberg"
+              android:textStyle="bold"
+              android:padding="10dp"
+              android:layout_marginLeft="20dp"
+              android:textSize="20sp"/>
+
+          <TextView
+              android:layout_below="@id/tv2"
+              android:id="@+id/tv3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="E-mail"
+              android:layout_margin="10dp"
+              android:textSize="15sp"/>
+          <TextView
+              android:id="@+id/tv4"
+              android:layout_below="@id/tv3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="abc@gmail.com"
+              android:textStyle="bold"
+              android:padding="10dp"
+              android:layout_marginLeft="20dp"
+              android:textSize="20sp"/>
+
+          <TextView
+              android:layout_below="@id/tv4"
+              android:id="@+id/tv5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Password"
+              android:layout_margin="10dp"
+              android:textSize="15sp"/>
+          <TextView
+              android:id="@+id/tv6"
+              android:layout_below="@id/tv5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="********"
+              android:textStyle="bold"
+              android:padding="10dp"
+              android:layout_marginLeft="20dp"
+              android:textSize="20sp"/>
+
+          <TextView
+              android:layout_below="@id/tv6"
+              android:id="@+id/tv7"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Address"
+              android:layout_margin="10dp"
+              android:layout_marginBottom="25dp"
+              android:textSize="15sp"/>
+          <TextView
+              android:id="@+id/tv8"
+              android:layout_below="@id/tv7"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="B-1/122,gokuldham appt, adajan"
+              android:textStyle="bold"
+              android:padding="10dp"
+              android:layout_marginLeft="20dp"
+              android:layout_marginBottom="25dp"
+              android:textSize="20sp"/>
+
+          <TextView
+              android:layout_below="@id/tv8"
+              android:id="@+id/tv9"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Father's name"
+              android:layout_margin="10dp"
+              android:layout_marginBottom="25dp"
+              android:textSize="15sp"/>
+          <TextView
+              android:id="@+id/tv10"
+              android:layout_below="@id/tv9"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Bhavesh sharma"
+              android:textStyle="bold"
+              android:padding="10dp"
+              android:layout_marginLeft="20dp"
+              android:layout_marginBottom="25dp"
+              android:textSize="20sp"/>
+
+          <TextView
+              android:layout_below="@id/tv10"
+              android:id="@+id/tv11"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Mother's name"
+              android:layout_margin="10dp"
+              android:layout_marginBottom="25dp"
+              android:textSize="15sp"/>
+          <TextView
+              android:id="@+id/tv12"
+              android:layout_below="@id/tv11"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Geeta sharma"
+              android:textStyle="bold"
+              android:padding="10dp"
+              android:layout_marginLeft="20dp"
+              android:textSize="20sp"/>
+
+          <TextView
+              android:layout_below="@id/tv12"
+              android:id="@+id/tv13"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Occupation"
+              android:layout_margin="10dp"
+              android:layout_marginBottom="25dp"
+              android:textSize="15sp"/>
+          <TextView
+              android:id="@+id/tv14"
+              android:layout_below="@id/tv13"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Job"
+              android:textStyle="bold"
+              android:padding="10dp"
+              android:layout_marginBottom="25dp"
+              android:layout_marginLeft="20dp"
+              android:textSize="20sp"/>
+
+          <Button
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Update Profile"
+              android:layout_marginLeft="75dp"
+              android:textAlignment="center"
+              android:layout_below="@id/tv14"
+              android:layout_marginBottom="85dp"/>
+
+        </RelativeLayout>
+      </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

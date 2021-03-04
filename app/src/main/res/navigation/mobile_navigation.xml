@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_student"
+        android:name="com.example.schoolmanagement.ui.gallery.GalleryFragment"
+        android:label="Student info"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.schoolmanagement.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.schoolmanagement.ui.slideshow.SlideshowFragment"
+        android:label="about us"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.example.schoolmanagement.AttendanceFragment"
+        android:label="Attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <fragment
+        android:id="@+id/homeworkFragment"
+        android:name="com.example.schoolmanagement.HomeworkFragment"
+        android:label="Homework"
+        tools:layout="@layout/fragment_homework" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.schoolmanagement.ResultFragment"
+        android:label="Result"
+        tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="com.example.schoolmanagement.TimetableFragment"
+        android:label="Timetable"
+        tools:layout="@layout/fragment_timetable" />
+    <fragment
+        android:id="@+id/receiptFragment"
+        android:name="com.example.schoolmanagement.ReceiptFragment"
+        android:label="Receipt"
+        tools:layout="@layout/fragment_receipt" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.example.schoolmanagement.EventFragment"
+        android:label="Event"
+        tools:layout="@layout/fragment_event" />
+    <fragment
+        android:id="@+id/communicationFragment"
+        android:name="com.example.schoolmanagement.CommunicationFragment"
+        android:label="Communication"
+        tools:layout="@layout/fragment_communication" />
+    <fragment
+        android:id="@+id/busrFragment"
+        android:name="com.example.schoolmanagement.BusrFragment"
+        android:label="Busroute"
+        tools:layout="@layout/fragment_busr" />
+    <fragment
+        android:id="@+id/syllabus_CoverageFragment"
+        android:name="com.example.schoolmanagement.Syllabus_CoverageFragment"
+        android:label="Syllabus Coverage"
+        tools:layout="@layout/fragment_syllabus__coverage" />
+
+    <fragment
+        android:id="@+id/teacherinfoFragment"
+        android:name="com.example.schoolmanagement.TeacherinfoFragment"
+        android:label="Teacher info"
+        tools:layout="@layout/fragment_teacherinfo" />
+    <fragment
+        android:id="@+id/add_AttendanceFragment"
+        android:name="com.example.schoolmanagement.Add_AttendanceFragment"
+        android:label="Add Attendance"
+        tools:layout="@layout/fragment_add__attendance" />
+    <fragment
+        android:id="@+id/add_HomeworkFragment"
+        android:name="com.example.schoolmanagement.Add_HomeworkFragment"
+        android:label="Add Homework"
+        tools:layout="@layout/fragment_add__homework" />
+    <fragment
+        android:id="@+id/add_ResultFragment"
+        android:name="com.example.schoolmanagement.Add_ResultFragment"
+        android:label="Add Result"
+        tools:layout="@layout/fragment_add__result" />
+    <fragment
+        android:id="@+id/add_TimetableFragment"
+        android:name="com.example.schoolmanagement.Add_TimetableFragment"
+        android:label="Add Timetable"
+        tools:layout="@layout/fragment_add__timetable" />
+
+    <fragment
+        android:id="@+id/add_SyllabuscoverageFragment"
+        android:name="com.example.schoolmanagement.Add_SyllabuscoverageFragment"
+        android:label="Add Syllabus coverage"
+        tools:layout="@layout/fragment_add__syllabuscoverage" />
+    <fragment
+        android:id="@+id/add_EventFragment"
+        android:name="com.example.schoolmanagement.Add_EventFragment"
+        android:label="Add event"
+        tools:layout="@layout/fragment_add__event" />
+    <fragment
+        android:id="@+id/add_ReceiptFragment"
+        android:name="com.example.schoolmanagement.Add_ReceiptFragment"
+        android:label="Add receipt"
+        tools:layout="@layout/fragment_add__receipt" />
+
+
+</navigation>

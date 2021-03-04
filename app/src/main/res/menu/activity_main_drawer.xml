@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_student"
+            android:icon="@drawable/ic_person"
+            android:title="Student info"/>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="About us"/>
+
+        <item
+            android:id="@+id/attendanceFragment"
+            android:icon="@drawable/ic_atten"
+            android:title="Attendance"/>
+        <item
+            android:id="@+id/homeworkFragment"
+            android:icon="@drawable/ic_home_work"
+            android:title="Homework"/>
+        <item
+            android:id="@+id/resultFragment"
+            android:icon="@drawable/ic_result"
+            android:title="Result"/>
+        <item
+            android:id="@+id/timetableFragment"
+            android:icon="@drawable/ic_timetab"
+            android:title="Timetable"/>
+        <item
+            android:id="@+id/receiptFragment"
+            android:icon="@drawable/ic_receipt"
+            android:title="Receipt"/>
+        <item
+            android:id="@+id/eventFragment"
+            android:icon="@drawable/ic_event_note"
+            android:title="Event"/>
+        <item
+            android:id="@+id/communicationFragment"
+            android:icon="@drawable/ic_comment"
+            android:title="Communication"/>
+        <item
+            android:id="@+id/busrFragment"
+            android:icon="@drawable/ic_bus"
+            android:title="Bus route"/>
+        <item
+            android:id="@+id/syllabus_CoverageFragment"
+            android:icon="@drawable/ic_syllabus"
+            android:title="Syllabus Coverage"/>
+
+
+        <item
+            android:id="@+id/teacherinfoFragment"
+            android:icon="@drawable/ic_person"
+            android:title="Teacher info"/>
+
+        <item
+            android:id="@+id/add_AttendanceFragment"
+            android:icon="@drawable/ic_atten"
+            android:title="Add Attendance"/>
+
+        <item
+            android:id="@+id/add_HomeworkFragment"
+            android:icon="@drawable/ic_home_work"
+            android:title="Add Homework"/>
+
+        <item
+            android:id="@+id/add_ResultFragment"
+            android:icon="@drawable/ic_result"
+            android:title="Add Result"/>
+
+        <item
+            android:id="@+id/add_TimetableFragment"
+            android:icon="@drawable/ic_timetab"
+            android:title="Add Timetable"/>
+
+
+
+        <item
+            android:id="@+id/add_SyllabuscoverageFragment"
+            android:icon="@drawable/ic_syllabus"
+            android:title="Add Syllabus coverage"/>
+
+        <item
+            android:id="@+id/add_EventFragment"
+            android:icon="@drawable/ic_event_note"
+            android:title="Add event"/>
+
+        <item
+            android:id="@+id/add_ReceiptFragment"
+            android:icon="@drawable/ic_receipt"
+            android:title="Add receipt"/>
+    </group>
+</menu>
