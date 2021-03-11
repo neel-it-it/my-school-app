@@ -58,4 +58,8 @@
         <item>SS</item>
         <item>SCI</item>
     </string-array>
+    <string name="title_activity_login2">Login2</string>
+    <string name="tab_text_1">Student</string>
+    <string name="tab_text_2">Teacher</string>
+    <string name="tab_text_3">Parent</string>
 </resources>

@@ -1,14 +1,21 @@
 package com.example.schoolmanagement;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.schoolmanagement.ui.home.HomeFragment;
 
 import java.util.List;
 
@@ -17,7 +24,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         private List<String> titles;
         private List<Integer> images;
 
-        public MyAdapter(Context context , List<String> titles , List<Integer> images)
+    public MyAdapter(Context context , List<String> titles , List<Integer> images)
     {
         this.context = context;
         this.titles = titles;
@@ -35,6 +42,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mtextview.setText(titles.get(position));
         holder.mimageview.setImageResource(images.get(position));
+        holder.rlc.setOnClickListener(view -> {
+            if(position == 0) {
+
+            }
+            else{
+                Toast.makeText(context, "" + titles.get(position), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -46,10 +62,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         ImageView mimageview;
         TextView mtextview;
+        RelativeLayout rlc;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             mimageview = itemView.findViewById(R.id.imv);
             mtextview = itemView.findViewById(R.id.text1);
+            rlc = itemView.findViewById(R.id.rlc);
         }
     }
 }

@@ -6,16 +6,18 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.schoolmanagement.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
         android:id="@+id/nav_student"
         android:name="com.example.schoolmanagement.ui.gallery.GalleryFragment"
         android:label="Student info"
         tools:layout="@layout/fragment_gallery" />
 
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.schoolmanagement.ui.home.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home" />
+
 
     <fragment
         android:id="@+id/nav_about_us"
