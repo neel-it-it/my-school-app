@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/lyy"
+    android:background="#ffffff"
+    tools:context=".TeacherinfoFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#FBE9E7"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="126dp"
+                android:layout_height="126dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/diwali"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bharat Sharma"
+                android:layout_below="@id/profile_image"
+                android:id="@+id/tv_tname"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Joining Date"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tname"
+                android:id="@+id/tv_tdate"
+                android:layout_alignParentLeft="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16-2-1990"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tname"
+                android:id="@+id/tv_tdate_ans"
+                android:layout_alignParentRight="true"/>
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_tdate"
+                android:layout_margin="5dp"
+                android:background="#FFAB91"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:layout_margin="8dp"
+                android:layout_below="@id/v1"
+                android:id="@+id/tv_tPass"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*********"
+                android:layout_margin="8dp"
+                android:layout_below="@id/v1"
+                android:id="@+id/tv_tpass_ans"
+                android:layout_alignParentRight="true"/>
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_tPass"
+                android:layout_margin="5dp"
+                android:background="#FFAB91"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:layout_margin="8dp"
+                android:layout_below="@id/v2"
+                android:id="@+id/tv_tEmail"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pacx@gmail.com"
+                android:layout_margin="8dp"
+                android:layout_below="@id/v2"
+                android:id="@+id/tv_tEmail_ans"
+                android:layout_alignParentRight="true"/>
+
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_tEmail"
+                android:layout_margin="5dp"
+                android:background="#FFAB91"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:layout_margin="8dp"
+                android:layout_below="@id/v3"
+                android:id="@+id/tv_tAddress"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A-1/105,Surya appt"
+                android:layout_margin="8dp"
+                android:layout_below="@id/v3"
+                android:id="@+id/tv_tAddress_ans"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile no"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tAddress"
+                android:id="@+id/tv_tMobile"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9148756213"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tAddress"
+                android:id="@+id/tv_tMobile_ans"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Experience"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tMobile"
+                android:id="@+id/tv_tExperience"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 years"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tMobile"
+                android:id="@+id/tv_tExperience_ans"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class Teacher"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tExperience"
+                android:id="@+id/tv_tClasteacher"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7-c"
+                android:layout_margin="8dp"
+                android:layout_below="@id/tv_tExperience"
+                android:id="@+id/tv_tClassteacher_ans"
+                android:layout_alignParentRight="true"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:id="@+id/btn_edit"
+                android:layout_below="@id/tv_tClasteacher"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"/>
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

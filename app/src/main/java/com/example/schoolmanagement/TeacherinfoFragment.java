@@ -19,8 +19,7 @@ public class TeacherinfoFragment extends Fragment {
     private RecyclerView Rv_teach;
     private ArrayList<teachermodel> list;
     private Teacheradapter madapter;
-
-
+//    String uid=getActivity().getIntent().getStringExtra("uid");
     public TeacherinfoFragment() {
         // Required empty public constructor
     }

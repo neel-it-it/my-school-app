@@ -1,5 +1,6 @@
 package com.example.schoolmanagement;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 
@@ -19,6 +22,7 @@ public class Add_ReceiptFragment extends Fragment {
     private RecyclerView rv_addresc;
     private ArrayList<addrescmodel> list;
     private addrescadapter madapter;
+    private FloatingActionButton fb4;
 
     public Add_ReceiptFragment() {
         // Required empty public constructor
@@ -38,6 +42,14 @@ public class Add_ReceiptFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add__receipt, container, false);
         rv_addresc = view.findViewById(R.id.rv_addresc);
+        fb4 = view.findViewById(R.id.fb4);
+        fb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),S_reciept.class);
+                startActivity(intent);
+            }
+        });
 
         setdata();
         setadapter();

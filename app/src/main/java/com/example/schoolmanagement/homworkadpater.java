@@ -1,5 +1,9 @@
 package com.example.schoolmanagement;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,18 +11,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.schoolmanagement.api.ApiClient;
+import com.example.schoolmanagement.response.stu_homework.HomeworkDataItem;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
+import java.util.List;
 
 public class homworkadpater extends RecyclerView.Adapter<homworkadpater.MyViewHolder> {
-    private  ArrayList<homworkmodel> list;
-    private  HomeworkFragment homeworkFragment;
+    private List<HomeworkDataItem> list;
+    private Activity activity;
 
-    public homworkadpater(HomeworkFragment homeworkFragment, ArrayList<homworkmodel> list) {
-        this.homeworkFragment = homeworkFragment;
+    public homworkadpater(List<HomeworkDataItem> list, Activity activity) {
         this.list = list;
+        this.activity = activity;
     }
 
     @NonNull
@@ -30,11 +39,21 @@ public class homworkadpater extends RecyclerView.Adapter<homworkadpater.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.imv_res.setImageResource(list.get(position).getImage());
-        holder.tv_subname.setText(list.get(position).getSubname());
-        holder.tv_subname.setText(list.get(position).getSubject());
-        holder.tv_standname.setText(list.get(position).getStandname());
-        holder.tv_stand.setText(list.get(position).getStand());
+        //holder.imv_res.setImageResource(list.get(position).getImage());
+        holder.tv_subname.setText(list.get(position).getHomeworkName());
+        holder.tv_subname.setText(list.get(position).getSubName());
+        holder.tv_standname.setText(list.get(position).getDivId());
+        holder.tv_stand.setText(list.get(position).getClassId());
+       holder.imv_res.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uriWebsite = Uri.parse(ApiClient.Asset_url + "Ajava.pdf");
+                Intent intent = new Intent(Intent.ACTION_VIEW,uriWebsite);
+                activity.startActivity(intent);
+
+
+            }
+        });
     }
 
     @Override
@@ -48,6 +67,7 @@ public class homworkadpater extends RecyclerView.Adapter<homworkadpater.MyViewHo
         public TextView tv_subject;
         public TextView tv_standname;
         public TextView tv_stand;
+        public CardView download;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

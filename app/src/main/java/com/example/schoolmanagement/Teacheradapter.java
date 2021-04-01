@@ -103,7 +103,7 @@ public class Teacheradapter extends RecyclerView.Adapter<Teacheradapter.MyViewHo
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(teacherinfoFragment.getActivity(),Updateprofile.class);
+                    Intent i = new Intent(teacherinfoFragment.getActivity(),Updateprofile.class).putExtra("uid",teacherinfoFragment.getActivity().getIntent().getStringExtra("uid"));
                     teacherinfoFragment.getActivity().startActivity(i);
                 }
             });

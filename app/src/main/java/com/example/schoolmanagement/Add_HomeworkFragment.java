@@ -9,13 +9,24 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.schoolmanagement.api.ApiClient;
+import com.example.schoolmanagement.api.ApiInterface;
+import com.example.schoolmanagement.helper.Common;
+import com.example.schoolmanagement.helper.PrefUtil;
+import com.example.schoolmanagement.response.teacheraddhomework.TeacherAddHomeworkResponse;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class Add_HomeworkFragment extends Fragment {
@@ -55,22 +66,38 @@ public class Add_HomeworkFragment extends Fragment {
             }
         });
         setdata();
-        setadapter();
+       // setadapter();
         return view;
     }
 
-    private void setadapter() {
-        madapter = new addhomeadapter(Add_HomeworkFragment.this,list);
-        rv_homew.setAdapter(madapter);
-        rv_homew.setLayoutManager(new LinearLayoutManager(getContext()));
-    }
+    /*private void setadapter() {
+
+    }*/
 
     private void setdata() {
 
         list = new ArrayList<>();
 
+        ApiInterface apiInterface= ApiClient.getClient().create(ApiInterface.class);
+        Toast.makeText(getActivity(), ""+PrefUtil.getstringPref(Common.userId,getActivity()).toString(), Toast.LENGTH_SHORT).show();
+        Log.d("userid",PrefUtil.getstringPref(Common.userId,getActivity()).toString());
+        apiInterface.teacherAddHomework(PrefUtil.getstringPref(Common.userId,getActivity()))
+                .enqueue(new Callback<TeacherAddHomeworkResponse>() {
+                    @Override
+                    public void onResponse(Call<TeacherAddHomeworkResponse> call, Response<TeacherAddHomeworkResponse> response) {
+                        madapter = new addhomeadapter(Add_HomeworkFragment.this,response.body().getData());
+                        rv_homew.setAdapter(madapter);
+                        rv_homew.setLayoutManager(new LinearLayoutManager(getContext()));
+                    }
 
-        addhomemodel model1 = new addhomemodel();
+                    @Override
+                    public void onFailure(Call<TeacherAddHomeworkResponse> call, Throwable t) {
+
+                    }
+                });
+
+
+       /* addhomemodel model1 = new addhomemodel();
         model1.setStandard("Class  6");
         model1.setDiv("Division  B");
         model1.setSubject("Subject: Maths");
@@ -108,7 +135,7 @@ public class Add_HomeworkFragment extends Fragment {
         model5.setSubject("Subject: DWPD");
         model5.setFile_download("File download");
         model5.setId("B005");
-        list.add(model5);
+        list.add(model5);*/
 
     }
 }

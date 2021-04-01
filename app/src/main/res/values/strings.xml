@@ -15,13 +15,21 @@
     <string name="network"><![CDATA[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqMdHZTfcudJjTlFtr6p4WZrXQb6c6G2Zdqw&usqp=CAU]]></string>
     <string name="networking">https://www.pespublicschool.com/wp-content/uploads/2019/06/School-700X450-1-400x257.jpg</string>
     <string name="networth">https://khaitanpublicschool.com/wp-content/uploads/2020/07/Khaitan_School_video-500x280.jpg</string>
-
+    <string name="err_tel">Enter valid mobile no.</string>
+    <string name="err_name">Enter the valid Name </string>
 
     <string-array name="items_class">
         <item>Class 1</item>
         <item>Class 2</item>
         <item>Class 3</item>
         <item>Class 4</item>
+        <item>Class 5</item>
+        <item>Class 6</item>
+        <item>Class 7</item>
+        <item>Class 8</item>
+        <item>Class 9</item>
+        <item>Class 10</item>
+
     </string-array>
 
     <string-array name="items_div_class_1">
@@ -29,6 +37,7 @@
         <item>Div 1-B</item>
         <item>Div 1-C</item>
         <item>Div 1-D</item>
+
     </string-array>
 
     <string-array name="items_div_class_2">
@@ -44,15 +53,129 @@
         <item>Div 3-C</item>
         <item>Div 3-D</item>
     </string-array>
-
+//for 4
     <string-array name="items_div_class_4">
         <item>Div 4-A</item>
         <item>Div 4-B</item>
         <item>Div 4-C</item>
         <item>Div 4-D</item>
     </string-array>
+//for 5
+    <string-array name="items_div_class_5">
+        <item>Div 5-A</item>
+        <item>Div 5-B</item>
+        <item>Div 5-C</item>
+        <item>Div 5-D</item>
+    </string-array>
+//for 6
+    <string-array name="items_div_class_6">
+        <item>Div 6-A</item>
+        <item>Div 6-B</item>
+        <item>Div 6-C</item>
+        <item>Div 6-D</item>
+    </string-array>
+//for 7
+    <string-array name="items_div_class_7">
+        <item>Div 7-A</item>
+        <item>Div 7-B</item>
+        <item>Div 7-C</item>
+        <item>Div 7-D</item>
+    </string-array>
+//for 8
+    <string-array name="items_div_class_8">
+        <item>Div 8-A</item>
+        <item>Div 8-B</item>
+        <item>Div 8-C</item>
+        <item>Div 8-D</item>
+    </string-array>
+//for 9
+    <string-array name="items_div_class_9">
+        <item>Div 9-A</item>
+        <item>Div 9-B</item>
+        <item>Div 9-C</item>
+        <item>Div 9-D</item>
+    </string-array>
+//for 10
+    <string-array name="items_div_class_10">
+        <item>Div 10-A</item>
+        <item>Div 10-B</item>
+        <item>Div 10-C</item>
+        <item>Div 10-D</item>
+    </string-array>
 
     <string-array name="items_div_class_1_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for 2
+    <string-array name="items_div_class_2_subject">
+    <item>English</item>
+    <item>Maths</item>
+    <item>SS</item>
+    <item>SCI</item>
+    </string-array>
+
+    //for 3
+    <string-array name="items_div_class_3_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for 4
+    <string-array name="items_div_class_4_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for5
+    <string-array name="items_div_class_5_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for 6
+    <string-array name="items_div_class_6_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for 7
+    <string-array name="items_div_class_7_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for 8
+    <string-array name="items_div_class_8_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for 9
+    <string-array name="items_div_class_9_subject">
+        <item>English</item>
+        <item>Maths</item>
+        <item>SS</item>
+        <item>SCI</item>
+    </string-array>
+
+    //for 10
+    <string-array name="items_div_class_10_subject">
         <item>English</item>
         <item>Maths</item>
         <item>SS</item>

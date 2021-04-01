@@ -8,7 +8,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardBackgroundColor="#ffffff"
+        app:cardBackgroundColor="#FBE9E7"
         android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
@@ -251,6 +251,7 @@
                 android:layout_height="wrap_content"
                 android:text="Edit Profile"
                 android:layout_below="@id/tv_ans7"
+                android:gravity="center"
                 android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

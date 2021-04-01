@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".ui.slideshow.SlideshowFragment">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        app:auto_cycle="true"
+        app:delay="0"
+        app:period="1000"
+        app:corner_radius="5">
+
+    </com.denzcoskun.imageslider.ImageSlider>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="Tapi Diploma Engineering College was established in January -2002, by Shree Tapi Brahmcharyashram Sabha Trust. The College is affiliated to Gujarat Technological University (GTU) approved by AICTE"/>
+            <TextView
+                android:layout_below="@id/tv_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="Shree Tapi Brahamcharyashram Sabha trust was rooted in 1924 by Shree Swami Atmanand Saraswati, a great social reformer and educationalist.  The members of the trust are people with deep interest and commitment to develop state-of-the-art Infrastructure for educational pursuit.  Our visionary trustees have been toiling hard to give these institution splendid physical and cultural dimensions."/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

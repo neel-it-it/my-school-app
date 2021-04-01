@@ -1,5 +1,6 @@
 package com.example.schoolmanagement;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 
@@ -19,6 +22,7 @@ public class Add_EventFragment extends Fragment {
     private RecyclerView rv_addevent;
     private ArrayList<addeventmodel> list;
     private addeventadapter madapter;
+    private FloatingActionButton fb5;
 
     public Add_EventFragment() {
         // Required empty public constructor
@@ -38,6 +42,14 @@ public class Add_EventFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add__event, container, false);
         rv_addevent = view.findViewById(R.id.rv_addevent);
+        fb5 = view.findViewById(R.id.fb5);
+        fb5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),S_event.class);
+                startActivity(intent);
+            }
+        });
 
         setdata();
         setadapter();

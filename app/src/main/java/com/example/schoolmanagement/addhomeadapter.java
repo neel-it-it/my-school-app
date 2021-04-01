@@ -8,13 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.schoolmanagement.response.teacheraddhomework.DataItem;
+import com.example.schoolmanagement.response.teacheraddhomework.TeacherAddHomeworkResponse;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class addhomeadapter extends RecyclerView.Adapter<addhomeadapter.MyViewHolder> {
     private final Add_HomeworkFragment add_homeworkFragment;
-    private ArrayList<addhomemodel> list;
+    private List<DataItem> list;
 
-    public addhomeadapter(Add_HomeworkFragment add_homeworkFragment, ArrayList<addhomemodel> list) {
+    public addhomeadapter(Add_HomeworkFragment add_homeworkFragment, List<DataItem> list) {
         this.add_homeworkFragment = add_homeworkFragment;
         this.list = list;
     }
@@ -28,11 +32,11 @@ public class addhomeadapter extends RecyclerView.Adapter<addhomeadapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.tv_stand.setText(list.get(position).getStandard());
-        holder.tv_div.setText(list.get(position).getDiv());
-        holder.tv_subject.setText(list.get(position).getSubject());
-        holder.tv_file.setText(list.get(position).getFile_download());
-        holder.tv_id.setText(list.get(position).getId());
+        DataItem item=list.get(position);
+        holder.tv_stand.setText("Class :- "+item.getJsonMemberClass());
+        holder.tv_subject.setText("Subject Name :- "+item.getHomeworkName());
+        holder.tv_id.setText("ID :- "+item.getHomework_id());
+        holder.tv_file.setText("PDF :- "+item.getHomework_pdf());
     }
 
     @Override

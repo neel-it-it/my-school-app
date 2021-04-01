@@ -3,33 +3,37 @@ package com.example.schoolmanagement;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import com.google.android.material.tabs.TabLayout;
 
 
 public class CommunicationFragment extends Fragment {
 
-
-
-    public CommunicationFragment() {
-        //
-    }
-
-
-
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_communication);
+
+        tabLayout = viewPager.findViewById(R.id.tabs);
+        viewPager = viewPager.findViewById(R.id.view_pager);
+
+        tabLayout.addTab(tabLayout.newTab().setText("Send"));
+        tabLayout.addTab(tabLayout.newTab().setText("Receive"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
 
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_communication, container, false);
+    private void getSupportFragmentManager() {
     }
+
+    private void setContentView(int fragment_communication) {
+
+    }
+
+
 }

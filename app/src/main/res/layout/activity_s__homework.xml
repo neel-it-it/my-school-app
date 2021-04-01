@@ -18,34 +18,100 @@
         android:layout_margin="10dp"
         android:layout_alignParentLeft="true" />
 
-    <Spinner
-        android:id="@+id/classSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvDemo"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="25dp"
-        android:entries="@array/items_class"/>
 
-    <Spinner
-        android:id="@+id/divSpinner"
-        android:visibility="visible"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvDemo"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        />
+        android:id="@+id/tv_class1"
+
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:text="Class"/>
     <Spinner
-        android:id="@+id/subSpinner"
-        android:visibility="visible"
+        android:id="@+id/classSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDemo"
+        android:layout_toRightOf="@id/tv_class1"
+        android:layout_marginTop="25dp"
+        android:entries="@array/items_class"/>
+
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/classSpinner"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_below="@id/tv_class1"
+        android:id="@+id/tv_div1"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:text="Div"/>
 
+    <Spinner
+        android:id="@+id/divSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classSpinner"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="42dp"
+        android:layout_toRightOf="@id/tv_div1"
+        android:entries="@array/items_div_class_1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_div1"
+        android:id="@+id/tv_sub"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:text="Sub"/>
+
+    <Spinner
+        android:id="@+id/subSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divSpinner"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:entries="@array/items_div_class_1_subject"
+        android:layout_marginTop="56dp"
+        android:layout_toRightOf="@id/tv_sub"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textSize="15sp"
+        android:layout_below="@id/subSpinner"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_path"
+        android:layout_below="@id/btn_file"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="demo path"/>
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:textSize="15sp"
+       android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"/>
 
 
 </RelativeLayout>

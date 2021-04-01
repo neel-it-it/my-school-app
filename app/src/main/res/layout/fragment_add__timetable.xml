@@ -20,6 +20,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="69dp"
+        android:backgroundTint="@color/pastal_purple"
         android:src="@drawable/ic_add" />
 
 </RelativeLayout>

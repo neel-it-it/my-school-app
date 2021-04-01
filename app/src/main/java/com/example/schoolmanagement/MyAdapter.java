@@ -11,10 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.schoolmanagement.ui.gallery.GalleryFragment;
 import com.example.schoolmanagement.ui.home.HomeFragment;
 
 import java.util.List;
@@ -39,12 +42,36 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+   public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mtextview.setText(titles.get(position));
         holder.mimageview.setImageResource(images.get(position));
         holder.rlc.setOnClickListener(view -> {
             if(position == 0) {
-
+                openFragment(new HomeworkFragment());
+            }
+            else if (position == 1) {
+                openFragment(new GalleryFragment());
+            }
+            else if (position == 2){
+                openFragment(new ResultFragment());
+            }
+            else if (position == 3){
+                openFragment(new ReceiptFragment());
+            }
+            else if (position == 4){
+                openFragment(new TimetableFragment());
+            }
+            else if (position == 5){
+                openFragment(new EventFragment());
+            }
+            else if (position == 7){
+                openFragment(new Syllabus_CoverageFragment());
+            }
+            else if (position == 8){
+                openFragment(new BusrFragment());
+            }
+            else if(position == 9){
+                openFragment(new AttendanceFragment());
             }
             else{
                 Toast.makeText(context, "" + titles.get(position), Toast.LENGTH_SHORT).show();
@@ -52,6 +79,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         });
 
     }
+
+    public void openFragment(Fragment fragment) {
+        ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,fragment).commit();
+    }
+
 
     @Override
     public int getItemCount() {

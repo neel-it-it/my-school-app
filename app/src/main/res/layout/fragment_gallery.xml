@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#2196F3"
+    android:id="@+id/ly"
+    android:background="@color/pastal_purple"
     tools:context=".ui.gallery.GalleryFragment">
+
 
   <RelativeLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="1">
+
       <com.google.android.material.floatingactionbutton.FloatingActionButton
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -107,8 +110,29 @@
               android:layout_marginLeft="20dp"
               android:textSize="20sp"/>
 
+            <TextView
+                android:layout_below="@id/tv6"
+                android:id="@+id/tvrol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roll-no"
+                android:layout_margin="10dp"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tvrid"
+                android:layout_below="@id/tvrol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"/>
+
+
+
           <TextView
-              android:layout_below="@id/tv6"
+              android:layout_below="@id/tvrid"
               android:id="@+id/tv7"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -174,7 +198,7 @@
               android:id="@+id/tv13"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Occupation"
+              android:text="Class"
               android:layout_margin="10dp"
               android:layout_marginBottom="25dp"
               android:textSize="15sp"/>
@@ -183,20 +207,42 @@
               android:layout_below="@id/tv13"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Job"
+              android:text="4"
               android:textStyle="bold"
               android:padding="10dp"
-              android:layout_marginBottom="25dp"
+
               android:layout_marginLeft="20dp"
               android:textSize="20sp"/>
 
+            <TextView
+                android:layout_below="@id/tv14"
+                android:id="@+id/tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Div"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="25dp"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tv16"
+                android:layout_below="@id/tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"/>
+
           <Button
+              android:id="@+id/btn_ustudent_profile"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="Update Profile"
               android:layout_marginLeft="75dp"
               android:textAlignment="center"
-              android:layout_below="@id/tv14"
+              android:layout_below="@id/tv16"
               android:layout_marginBottom="85dp"/>
 
         </RelativeLayout>

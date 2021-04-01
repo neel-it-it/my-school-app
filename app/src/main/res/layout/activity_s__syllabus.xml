@@ -59,14 +59,25 @@
         android:visibility="visible" />
 
     <Button
-        android:id="@+id/btn_1"
+        android:id="@+id/btn_file"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:backgroundTint="#FF018786"
         android:text="Add"/>
 
+    <TextView
+        android:id="@+id/tv_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="demo path"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/btn_file"/>
+
     <Button
+        android:id="@+id/btn_upload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
